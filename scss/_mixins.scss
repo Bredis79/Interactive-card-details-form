@@ -1,0 +1,35 @@
+@mixin card__desktop--front {
+    width: 24.833rem;
+    height: 13.611rem;
+    background-image: url(../images/bg-card-front.png);
+} 
+
+@mixin card__desktop--back {
+    width: 24.833rem;
+    height: 13.611rem;
+    background-image: url(../images/bg-card-back.png);
+}
+
+@mixin card__mobile--front {
+    width: 15.944rem;
+    height: 8.777rem;
+    background-image: url(../images/bg-card-front.png);
+    background-size: cover;
+}
+
+@mixin card__mobile--back {
+    width: 15.944rem;
+    height: 8.777rem;
+    background-image: url(../images/bg-card-back.png);
+    background-size: cover;
+}
+
+// @mixin card__front--logo {
+//     width: 5rem;
+//     height: 2.777rem;
+// }
+
+
+
+
+

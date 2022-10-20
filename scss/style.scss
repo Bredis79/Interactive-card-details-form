@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Space+Grotesk:wght@500&display=swap');
+@import "mixins";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+html {
+    font-size: 18px;
+    
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    width: $width_card-desktop;
+    height: $height_card-desktop;
+
+    background: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+
+}
+
+.card--sides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card__front {
+    @include card__desktop--front;
+    margin-left: 164px;
+    margin-bottom: 38px;
+    padding: 28px 35px 0 30px;
+}
+
+.card__front h1 {
+    font-size: $size-h1;
+    letter-spacing: 3.7px;
+    line-height: $size-h1;
+    color: $col_White;
+}
+
+.card__front--logo {
+//    @include card__front--logo;
+   margin-bottom: 64px; 
+
+}
+
+.card__back {
+    @include card__desktop--back;
+    margin-left: 260px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: $col_White;
+    letter-spacing: 1.5px;
+    font-size: $size-p;
+}
+
+
+.card__holder-info {
+    display: flex;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: $size-p;
+    letter-spacing: 1.5px;
+    color: $col_White;
+    justify-content: space-between;
+
+}
+
+.cardholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.cardholder form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 125px;
+    width: $width_form;
+    height: $height_form;
+}
+
+form label {
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 15px 18px;
+    border: 1px solid $col_Dark-grayish-violet;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.cardholder__wrap {
+    display: flex;
+    border: 1px solid red;
+}
+
+.cardholder__cvc{
+    margin-left: 20px;
+}
+
+.cardholder--sent {
+    display: none
+}
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
