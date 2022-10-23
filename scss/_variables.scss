@@ -1,6 +1,6 @@
 /*** COLORS ***/
 $col_input_error: hsl(0, 100%, 66%);
-$col_active_input_border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+$col_active_input_border: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
 $col_White: hsl(0, 0%, 100%);
 $col_Light-grayish-violet: hsl(270, 3%, 87%);
 $col_Dark-grayish-violet: hsl(279, 6%, 55%);
@@ -16,4 +16,6 @@ $height_form: 19.444rem;
 
 /*** FONTS ***/
 $size-h1: 1.5rem;
-$size-p: 0.8rem;
+$size-p: 0.78rem;
+$size-submit: 1rem;
+$size-placeholder: 1rem;

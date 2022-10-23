@@ -21,7 +21,7 @@
         <h1>0000 0000 0000 0000</h1>
         <section class="card__holder-info">
           <p>Jane Appleseed</p>
-          <p>00/00</p>
+          <p id="exp"><span id="expM">00</span>/<span id="expY">00</span></p>
         </section>
       </section>
 
@@ -33,35 +33,42 @@
 
     <section class="cardholder">
       <form>
-        <label for="">Cardholder Name</label>
-        <input type="text" placeholder="e.g. Jane Appleseed">
+        <label for="name">Cardholder Name</label>
+        <input type="text" id="name" placeholder="e.g. Jane Appleseed">
 
-        <label for="">Card Number</label>
-        <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+        <div class="cardholder--error">
+          Wrong format, numbers only
+        </div>
 
         <section class="cardholder__wrap">
           <div class="cardholder__date">
-            <label for="">Exp. Date (MM/YY)</label><br>
-            <input type="number" name="date" id="date" min="1" max="30" step="1" placeholder="MM">
-            <input type="number" name="year" id="year" min="2020" max="2030" step="1" placeholder="YY">
+            <label for="date">Exp. Date (MM/YY)</label><br>
+            <input type="number" name="month" id="month" min="1" max="12" step="1" placeholder="MM">
+            <input type="number" name="year" id="year" min="0" max="99" step="1" placeholder="YY">
+            <div class="cardholder__date--error">
+              Can't be blank
+            </div>
           </div>
 
           <div class="cardholder__cvc">
             <label for="cvc">CVC</label><br>
-            <input type="number" id="cvc" min="3" max="3" placeholder="e.g. 123">
+            <input type="number" id="cvc" min="0" max="999" placeholder="e.g. 123">
+            <div class="cardholder__cvc--error">
+              Can't be blank
+            </div>
           </div>
-
-
         </section>
-        <input type="text" value="Confirm">
-
+        <input type="submit" class="cardholder--submit" value="Confirm">
       </form>
+
     </section>
     <!-- Completed state start -->
     <section class="cardholder--sent">
-      Thank you!
-      We've added your card details
-      Continue
+      <h1>Thank you!</h1>
+      <h2>We've added your card details</h2>
+      <button type="submit" class="cardholder__sent--btn">Continue</button>
     </section>
 
   </main>

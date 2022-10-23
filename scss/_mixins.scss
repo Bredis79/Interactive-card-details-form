@@ -2,6 +2,7 @@
     width: 24.833rem;
     height: 13.611rem;
     background-image: url(../images/bg-card-front.png);
+    
 } 
 
 @mixin card__desktop--back {
@@ -24,10 +25,12 @@
     background-size: cover;
 }
 
-// @mixin card__front--logo {
-//     width: 5rem;
-//     height: 2.777rem;
-// }
+@mixin error {
+    color: hsl(0deg, 100%, 66%);
+    font-size: 0.65rem;
+    margin-top: -18px;
+    margin-bottom: 30px;
+}
 
 
 

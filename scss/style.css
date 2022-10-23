@@ -5,12 +5,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: 500;
 }
 
 html {
-  font-size: 18px;
+  font-weight: 500;
   font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
 }
 
 body {
@@ -32,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
 }
 
 .card__front {
@@ -41,13 +42,15 @@ body {
   margin-left: 164px;
   margin-bottom: 38px;
   padding: 28px 35px 0 30px;
+  border-radius: 10px;
 }
 
 .card__front h1 {
   font-size: 1.5rem;
-  letter-spacing: 3.7px;
+  letter-spacing: 4.1px;
   line-height: 1.5rem;
-  color: hsl(0deg, 0%, 100%);
+  color: rgb(255, 255, 255);
+  font-weight: 100;
 }
 
 .card__front--logo {
@@ -65,14 +68,14 @@ body {
   align-items: center;
   color: hsl(0deg, 0%, 100%);
   letter-spacing: 1.5px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
 .card__holder-info {
   display: flex;
   margin-top: 30px;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 1.5px;
   color: hsl(0deg, 0%, 100%);
   justify-content: space-between;
@@ -85,40 +88,181 @@ body {
   align-content: center;
 }
 
+.cardholder input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.cardholder input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.cardholder input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .cardholder form {
   display: flex;
   flex-direction: column;
-  margin-left: 125px;
+  margin-left: 112px;
   width: 21.388rem;
-  height: 19.444rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 form label {
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 form input {
-  padding: 15px 18px;
-  border: 1px solid hsl(279deg, 6%, 55%);
-  border-radius: 10px;
+  padding: 10px 18px;
   margin-bottom: 25px;
+  cursor: pointer;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 10px;
+  color: hsl(278deg, 68%, 11%);
+  font-size: 1rem;
+}
+
+form input:active,
+form input:focus {
+  outline: none;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) border-box;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+/* Hide arrows in number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .cardholder__wrap {
   display: flex;
-  border: 1px solid red;
+  margin-top: -9px;
+  margin-bottom: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: 100px;
+}
+
+.cardholder__wrap input {
+  margin-top: 8px;
+  margin-right: 5px;
+  width: 80px;
 }
 
 .cardholder__cvc {
-  margin-left: 20px;
+  margin-left: 15px;
+}
+
+.cardholder__cvc input {
+  width: 192px;
+  margin-right: 0px;
+}
+
+.cardholder--submit {
+  background: hsl(278deg, 68%, 11%) !important;
+  color: hsl(270deg, 3%, 87%);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 14px;
 }
 
 .cardholder--sent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: none;
+  margin: 305px 0 0 112px;
+  text-align: center;
+}
+
+.cardholder--sent h1 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 3.2px;
+  margin-bottom: 17px;
+  margin-top: 30px;
+}
+
+.cardholder--sent::before {
+  content: url(../images/icon-complete.svg);
+  margin-bottom: 30px;
+}
+
+.cardholder--sent h2 {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: hsl(279deg, 6%, 55%);
+}
+
+.cardholder__sent--btn {
+  width: 380px;
+  height: 54px;
+  font-size: 1rem;
+  background-color: hsl(278deg, 68%, 11%);
+  color: white;
+  border-radius: 10px;
+  margin-top: 46px;
+  letter-spacing: 1px;
+}
+
+/*** BLOCK WITH ERRORS **/
+.cardholder--error {
+  width: 200px;
+  height: 15px;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 0.65rem;
+  margin-top: -18px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.cardholder__date--error {
+  width: 100px;
+  height: 15px;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 0.65rem;
+  margin-top: -18px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.cardholder__cvc--error {
+  width: 100px;
+  height: 15px;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 0.65rem;
+  margin-top: -18px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.inputError {
+  border-color: hsl(0deg, 100%, 66%);
 }
 
 .attribution {
