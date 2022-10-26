@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Space+Grotesk:wght@500&display=swap"); /*** COLORS ***/
 /*** SIZES ***/
 /*** FONTS ***/
+/*** MEDIA QUERIES ***/
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +19,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 
 .card {
   display: flex;
-  width: 80rem;
+  width: 100%;
+  max-width: 80rem;
   height: 50rem;
   background: url(../images/bg-main-desktop.png);
   background-repeat: no-repeat;
@@ -265,6 +268,95 @@ input[type=number] {
   border-color: hsl(0deg, 100%, 66%);
 }
 
+/*** MEDIA QUERIES ***/
+@media (max-width: 1290px) {
+  .card {
+    flex-direction: column;
+    background-image: url(../images/bg-main-mobile.png);
+    max-width: 375px;
+    align-items: center;
+  }
+  .card--sides {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-bottom: 8px;
+  }
+  .card__front {
+    margin-left: -62px;
+    margin-top: -64px;
+    transition: 1s;
+    width: 15.944rem;
+    height: 8.777rem;
+    background-image: url(../images/bg-card-front.png);
+    background-size: cover;
+  }
+  .card__front--logo {
+    margin-top: -10px;
+    margin-bottom: 31px;
+    height: 30px;
+  }
+  .card__front h1 {
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+    line-height: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+  }
+  .card__back {
+    margin-left: 50px;
+    margin-top: 32px;
+    transition: 2s;
+    width: 15.944rem;
+    height: 8.777rem;
+    background-image: url(../images/bg-card-back.png);
+    background-size: cover;
+    padding: 30px;
+    font-size: 0.5rem;
+  }
+  .cardholder {
+    margin-left: 0px;
+    margin-top: 0px;
+    transition: 4s;
+    width: 330px;
+  }
+  .card__holder-info {
+    margin-top: 14px;
+    font-size: 0.55rem;
+  }
+  form input {
+    margin-bottom: 23px;
+  }
+  .cardholder form {
+    margin: 0;
+  }
+  .cardholder__wrap {
+    justify-content: space-between;
+  }
+  .cardholder__wrap input {
+    margin-top: 8px;
+    margin-right: 0px;
+    width: 72px;
+  }
+  .cardholder__wrap input:nth-of-type(3) {
+    margin-right: 10px;
+  }
+  .cardholder__cvc {
+    margin: 0;
+  }
+  .cardholder__cvc input {
+    width: 165px;
+    margin-right: 0px;
+  }
+  .cardholder--submit {
+    margin-top: -3px;
+    padding: 16px 0;
+  }
+  .cardholder--sent {
+    margin: 0px;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;

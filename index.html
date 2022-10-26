@@ -45,8 +45,8 @@
         <section class="cardholder__wrap">
           <div class="cardholder__date">
             <label for="date">Exp. Date (MM/YY)</label><br>
-            <input type="number" name="month" id="month" min="1" max="12" step="1" placeholder="MM">
-            <input type="number" name="year" id="year" min="0" max="99" step="1" placeholder="YY">
+            <input type="tel" name="month" id="month" min="1" max="12" step="1" maxlength="2" placeholder="MM">
+            <input type="tel" name="year" id="year" min="0" max="99" step="1" maxlength="2" placeholder="YY">
             <div class="cardholder__date--error">
               Can't be blank
             </div>
@@ -54,7 +54,7 @@
 
           <div class="cardholder__cvc">
             <label for="cvc">CVC</label><br>
-            <input type="number" id="cvc" min="0" max="999" placeholder="e.g. 123">
+            <input type="tel" id="cvc" min="0" max="999" maxlength="3" placeholder="e.g. 123">
             <div class="cardholder__cvc--error">
               Can't be blank
             </div>

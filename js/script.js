@@ -6,6 +6,7 @@ let inputMonth = document.querySelector("#month")
 let inputYear = document.querySelector("#year")
 let inputCvc = document.querySelector("#cvc")
 let cardholderSent = document.querySelector(".cardholder--sent")
+const continueBtn = document.querySelector(".cardholder__sent--btn")
 
 /*** OUTPUTS ***/
 let cardNumberFront = document.querySelector(".card__front h1")
@@ -65,7 +66,9 @@ cardNumberFront.textContent = event.path[1][1].value
         }
         
 //get day from input and put it on the card
- if (event.path[1][2].value > 0) {
+
+
+ if (event.path[1][2].value > 0 && event.path[1][2].value < 13 ) {
     expMonth.textContent = event.path[1][2].value 
     // remove error border
      inputMonth.classList.remove("inputError") 
@@ -73,10 +76,11 @@ cardNumberFront.textContent = event.path[1][1].value
      // hide error block
      cardDateError.style.display = "none"
      
-     // when is one number put 0 before
+     // when is one digit put 0 before
       if(event.path[1][2].value.length < 2){
         expMonth.textContent = `0${event.path[1][2].value}`
       }
+
 
  } else {
     cardDateError.style.display = "block"
@@ -88,9 +92,11 @@ cardNumberFront.textContent = event.path[1][1].value
     cardDateError.style.display = "none"
 }
 
+
+
 // get year from input and put it on the card
 
-if (event.path[1][3].value.length > 0){
+if (event.path[1][3].value.length > 0 && event.path[1][3].value > 22 && event.path[1][3].value < 40) {
     expYear.textContent = event.path[1][3].value
    
     // remove error border
@@ -125,16 +131,30 @@ if(event.path[1][4].value.length > 0) {
     // add error border
     inputCvc.classList.add("inputError")
  }
-console.log(event)
 
 
-
-  
-
-// hide form inputs 
+if(inputCardNumber.value == "" || inputMonth.value == "" || inputYear.value == "" || inputCvc.value == ""){
+  console.log("Something went wrong")
+} else {
+  // hide form inputs 
 inputsCardholder.style.display = "none"
 
 // show thank you messege
 cardholderSent.style.display = "block"
+}
+
+
+})
+
+continueBtn.addEventListener("click", function(event){
+  // show form inputs 
+  inputsCardholder.style.display = "flex"
+  
+  // hide thank you messege
+  cardholderSent.style.display = "none"
+
+  
+  location.reload();
+ 
 
 })
