@@ -35,7 +35,7 @@ btnConfirm.addEventListener("click", function(event){
     event.preventDefault()
 
 // write name on front side...Wnen is empty let current value
-if(event.path[1][0].value == ""){
+if(inputName.textContent.value == ""){
   
   cardHolder.textContent = cardHolder.textContent
 
