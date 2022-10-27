@@ -36,7 +36,7 @@ btnConfirm.addEventListener("click", function(event){
 
 // write name on front side...Wnen is empty let current value
 if(inputName.textContent.value == ""){
-  
+  console.log(inputName.textContent.value)
   cardHolder.textContent = cardHolder.textContent
 
   // show error block
