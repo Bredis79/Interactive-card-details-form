@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html {
@@ -60,7 +59,6 @@ body {
 }
 
 .card__front--logo {
-//    @include card__front--logo;
    margin-bottom: 64px; 
 
 }
@@ -223,7 +221,15 @@ input[type=number] {
 }
 
 /*** BLOCK WITH ERRORS **/
-.cardholder--error {
+.cardholder__cardName--error {
+    width: 200px;
+    height: 15px;
+    @include error;
+    display: none;
+}
+
+
+.cardholder__cardNumber--error {
     width: 200px;
     height: 15px;
     @include error;
@@ -271,7 +277,7 @@ input[type=number] {
 
     .card__front {
         margin-left: -62px;
-        margin-top: -64px;
+        margin-top: -69px;
         transition: 1s;
         @include card__mobile--front
     }
@@ -353,13 +359,6 @@ input[type=number] {
         margin: 0px;
     }
 }
-
-
-
-
-
-
-
 
 
 .attribution { font-size: 11px; text-align: center; }

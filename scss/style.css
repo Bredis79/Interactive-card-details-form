@@ -234,7 +234,17 @@ input[type=number] {
 }
 
 /*** BLOCK WITH ERRORS **/
-.cardholder--error {
+.cardholder__cardName--error {
+  width: 200px;
+  height: 15px;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 0.65rem;
+  margin-top: -18px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.cardholder__cardNumber--error {
   width: 200px;
   height: 15px;
   color: hsl(0deg, 100%, 66%);
@@ -285,7 +295,7 @@ input[type=number] {
   }
   .card__front {
     margin-left: -62px;
-    margin-top: -64px;
+    margin-top: -69px;
     transition: 1s;
     width: 15.944rem;
     height: 8.777rem;
